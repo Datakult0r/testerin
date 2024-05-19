@@ -1,0 +1,17 @@
+example for a simple static site:```toml[build]
+   publish = "public"
+   command = "npm run build"
+
+    [build.environment]
+      NODE_VERSION = "14"
+
+    [dev]
+      command = "npm run dev"
+      port = 8888
+      targetPort = 3000
+    ``
+### Step 3: Connect Your Repository to Netlify
+1. **Go to the Netlify Dashboard** and click on “New site from Git.”
+2. **Select your Git provider** (e.g., GitHub) and authorize Netlify to access your account.
+3. **Select the repository** you created for your project.
+4. **Configure your settings**: In the deployment settings, set the build command (if applicable, e.g., npm run build for a React app) and the publish directory (e.g., public, dist`).
